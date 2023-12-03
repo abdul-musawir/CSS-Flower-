@@ -1,1 +1,139 @@
+:root{
+    --bg: linear-gradient(to top, #010329,#000005);
+    --glassClr: linear-gradient(to left, #142544,
+     #1a9092);
+    --WaterClr: linear-gradient(to left, #142544,
+    #1b6d6e);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body{
+    background-image: var(--bg);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.flower {
+    position: relative;
+}
+
+.Flowervase {
+    width: 20vmin;
+    height: 30vmin;
+    background-image: var(--glassClr);
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15%
+    100%);
+    opacity: 0.8;
+}
+
+.Flowervase::after {
+    content: '';
+    position: absolute;
+    background-color: #182843;
+    width: 100%;
+    height: 2vmin;
+    bottom: 0;
+    left: 0;
+}
+
+.Flowervase::before {
+   content: '';
+   position: absolute;
+   background-color: var(--WaterClr);
+   width: 100%;
+   height: 15vmin;
+   bottom: 0;
+   left: 0;
+}
+
+.container {
+    position: absolute;
+    left: 45%;
+    bottom: 2vmin;
+}
+
+.container2 {
+    left: 50%;
+    bottom: 5%;
+    transform-origin: 10% left;
+    transform: rotate(20deg);
+}
+
+.container3 {
+    left: 30%;
+    bottom: 5%;
+    transform-origin: 10% left;
+    transform: rotate(-10deg);
+}
+
+.container3 .stick {
+    height: 45vmin;
+    position: relative;
+}
+
+.container .stick::after {
+    content: '';
+    position: absolute;
+    width: 6vmin;
+    height: 6vmin;
+    border: 2vmin solid #104d4e;
+    border-bottom: transparent;
+    border-left: transparent;
+    left: 0;
+    top: 0;
+    transform: translate(-69%, -30%) rotate(-5deg);
+    border-radius: 10vmin 10vmin 0 0;
+}
+
+.container .stick::before {
+    content: '';
+    position: absolute;
+    width: 6vmin;
+    height: 6vmin;
+    left: -40%;
+    top: -1%;
+    background-color: #4e1010;
+    transform-origin: right;
+    transform: translate(-100%, -80%) rotate(-20deg);
+    border-radius: 2vmin;
+}
+
+.container3 .stick {
+    background-image: linear-gradient(to top,
+    #142544, #104d4e);
+}
+
+.container2 .stick {
+    height: 45vmin;
+}
+
+.container2 .leafWrap {
+    transform: translateX(-50%) rotate(20deg);
+}
+
+.container3 ,.leafWrap {
+    transform: translate(-350%, -50%) rotate(-120deg);
+}
+
+.container2 .leaf:not(:first-child) {
+    width: 3.8vmin;
+    height: 10vmin;
+    background-image: linear-gradient(to bottom,
+    #ff43b6, #c22887, #1a233a 99%);
+
+}
+
+.container3 .leaf:not(:first-child) {
+    width: 3.8vmin;
+    height: 10vmin;
+    background-image: linear-gradient(to bottom,
+    #ad2be0, #71229a, #1a233a 99%);
+    
+}
